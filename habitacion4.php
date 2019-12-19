@@ -1,4 +1,4 @@
-<?php>
+<!DOCTYPE html>
 <head>
 
   <meta charset="utf-8">
@@ -236,14 +236,14 @@
               <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);"><i
                   class="fas fa-tv fa-5x mt-3 mb-3"></i><br>TV</a>
             </div>
+            
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
+  </div>
+<?php echo "prueba";?>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -274,4 +274,4 @@
   });
 }); 
 </script>
-?>
+</html>
