@@ -522,7 +522,7 @@
                             </div>
                       </div>
                   </div>
-                  <a class="card-footer text-blak clearfix small z-1" href="habitacion4.html">
+                  <a class="card-footer text-blak clearfix small z-1" href="habitacion4.php">
                     <span class="float-left">View Details</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
