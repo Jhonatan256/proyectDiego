@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -360,7 +360,7 @@
                       </div>
                   </div>
                   <a class="card-footer text-blak clearfix small z-1" href="sala.html">
-                    <span class="float-left">View Details</span>
+                    <span class="float-left">Ver Detalle</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
                     </span>
@@ -383,7 +383,7 @@
                         </div>
                     </div>
                     <a class="card-footer text-blak clearfix small z-1" href="sala">
-                      <span class="float-left">View Details</span>
+                      <span class="float-left">Ver Detalle</span>
                       <span class="float-right">
                         <i class="fas fa-angle-right"></i>
                       </span>
@@ -408,7 +408,7 @@
                         </div>
                     </div>
                     <a class="card-footer text-blak clearfix small z-1" href="#">
-                      <span class="float-left">View Details</span>
+                      <span class="float-left">Ver Detalle</span>
                       <span class="float-right">
                         <i class="fas fa-angle-right"></i>
                       </span>
@@ -431,7 +431,7 @@
                       </div>
                   </div>
                   <a class="card-footer text-blak clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
+                    <span class="float-left">Ver Detalle</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
                     </span>
@@ -454,7 +454,7 @@
                       </div>
                   </div>
                   <a class="card-footer text-blak clearfix small z-1" href="habitacion1.php">
-                    <span class="float-left">View Details</span>
+                    <span class="float-left">Ver Detalle</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
                     </span>
@@ -477,7 +477,7 @@
                       </div>
                   </div>
                   <a class="card-footer text-blak clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
+                    <span class="float-left">Ver Detalle</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
                     </span>
@@ -500,7 +500,7 @@
                       </div>
                   </div>
                   <a class="card-footer text-blak clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
+                    <span class="float-left">Ver Detalle</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
                     </span>
@@ -522,8 +522,8 @@
                             </div>
                       </div>
                   </div>
-                  <a class="card-footer text-blak clearfix small z-1" href="habitacion4.html">
-                    <span class="float-left">View Details</span>
+                  <a class="card-footer text-blak clearfix small z-1" href="habitacion4.php">
+                    <span class="float-left">Ver Detalle</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
                     </span>
@@ -545,7 +545,7 @@
                       </div>
                   </div>
                   <a class="card-footer text-blak clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
+                    <span class="float-left">Ver Detalle</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
                     </span>

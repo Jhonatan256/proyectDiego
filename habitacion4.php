@@ -40,7 +40,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <a href="./index.html"><h1 class="h3 mb-0 text-gray-800">Casa</h1></a>
+          <a href="./index.php"><h1 class="h3 mb-0 text-gray-800">Casa</h1></a>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -265,11 +265,11 @@
 <script type="text/javascript">
   $(function() {
     $('.encender').on('click', function() {
-      console.log($(this).hasClass("text-primary"));
-      if($(this).hasClass("text-primary")){
-        $(this).removeClass('text-primary');
+      console.log($(this).hasClass("text-warning"));
+      if($(this).hasClass("text-warning")){
+        $(this).removeClass('text-warning');
       }else{
-        $(this).addClass('text-primary');
+        $(this).addClass('text-warning');
       }     
   });
 }); 

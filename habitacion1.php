@@ -13,7 +13,7 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <!--link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">-->
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -256,7 +256,7 @@
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                    <!--<img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">-->
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
@@ -266,7 +266,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                    <!--<img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">-->
                     <div class="status-indicator"></div>
                   </div>
                   <div>
@@ -276,7 +276,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                    <!--<img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">-->
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
@@ -286,7 +286,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                    <!--<img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">-->
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
@@ -304,7 +304,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <!--<img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">-->
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -345,58 +345,35 @@
           <!-- Content Row -->
           <div class="row">
 
-             <!--Luz 1-->
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
+              <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0)" onclick = "mqtt()" ><i
+                  class="far fa-lightbulb fa-5x mt-3 mb-3"></i><br>ILUMINATION</a>
+            </div> 
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
+              <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);"><i
+                  class="fas fa-tv fa-5x mt-3 mb-3"></i><br>TV</a>
+            </div>
 
-             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                          <div class="col mr-2">
-                              <div class="h6 mb-0 font-weight-bold text-primary text-uppercase mb-1">Luz 1</div>
-                          </div>
-                          <div class="col-auto">
-                              <i class="fas fa-lightbulb fa-6x text-gray-300"></i>
-                            </div>
-                      </div>
-                  </div>
-                  <a class="card-footer text-blak clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
-                    <span class="float-right">
-                      <i class="fas fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center" id="contenedor" name="contenedor">
+              
+            </div>
 
-              <!--Luz 2-->
 
-              <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
-                  <div class="card border-left-dark shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="h5 mb-0 font-weight-bold text-dark text-uppercase mb-1">Garaje</div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-warehouse fa-6x text-gray-300"></i>
-                              </div>
-                        </div>
-                    </div>
-                    <a class="card-footer text-blak clearfix small z-1" href="sala">
-                      <span class="float-left">View Details</span>
-                      <span class="float-right">
-                        <i class="fas fa-angle-right"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div> 
+            
+            <?php
+            echo "PRUEBA";
+            ?>
+
           </div>
         </div>
-       </div>
       </div>
     </div>
   </div>
-  <?php echo "prueba";?>
+  </div>
+
+
+
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -415,5 +392,157 @@
   <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
+
+<script type="text/javascript">
+  $(function() {
+    $('.encender').on('click', function() {
+      console.log($(this).hasClass("text-warning"));
+      if($(this).hasClass("text-warning")){
+        $(this).removeClass('text-warning');
+      }else{
+        $(this).addClass('text-warning');
+      }    
+  });
+}); 
+</script>
+<!---------------------------------------------------------------------------------------------------------->
+
+<script>
+  function mqtt(){
+    $('#contenedor').html('<?php echo  accion(); ?>');
+  }
+</script>
+<!---------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------PHP---------------------------------------------------------------------------------->
+<?php
+///require_once 'mqtt.php';
+function accion(){
+echo "accion";
+echo '<form action="habitacion1.php" method="post">';
+//echo '<input type="submit" name="btn1" value="PUBLISH">';
+//echo '<input type="submit" name="btn2" value="SUBSCRIBE">';
+
+            }
+            
+?>
+
+
+<!---------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------PHP---------------------------------------------------------------------------------->
+
+<?php
+
+echo '<form action="habitacion1.php" method="post">';
+echo '<input type="submit" name="btn1" value="PUBLISH">';
+echo '<input type="submit" name="btn2" value="SUBSCRIBE">';
+
+echo '</form>';
+
+$statusmsg = "";
+$rcv_message = "";
+
+if ($_POST["btn1"] == "PUBLISH")
+	{
+    publish_message('diego', 'PUBTOPIC', 'localhost', 1883, 5);				    
+	}
+
+if ($_POST["btn2"] == "SUBSCRIBE")
+	{
+	$statusmsg = "";	
+	$rcv_message = "";
+	
+	read_topic('PUBTOPIC', 'localhost', 1883, 60, 5);	
+	
+	if(!empty($rcv_message) )
+		{
+		echo $statusmsg."RCVD|" . $rcv_message ;	
+		}
+	else
+		{
+		echo $statusmsg."TIMEDOUT"; 	
+		}		
+	}
+
+function publish_message($msg, $topic, $server, $port, $keepalive) {
+	
+	$client = new Mosquitto\Client();
+	$client->onConnect('connect');
+	$client->onDisconnect('disconnect');
+	$client->onPublish('publish');
+	$client->connect($server, $port, $keepalive);
+	
+	try {
+		$client->loop();
+		$mid = $client->publish($topic, $msg);
+		$client->loop();
+		}catch(Mosquitto\Exception $e){
+				echo 'Exception';          
+				return;
+			}
+    $client->disconnect();
+	unset($client);					    
+}
+
+function read_topic($topic, $server, $port, $keepalive, $timeout) {
+	$client = new Mosquitto\Client();
+	$client->onConnect('connect');
+	$client->onDisconnect('disconnect');
+	$client->onSubscribe('subscribe');
+	$client->onMessage('message');
+	$client->connect($server, $port, $keepalive);
+	$client->subscribe($topic, 1);
+	
+	$date1 = time();
+	$GLOBALS['rcv_message'] = '';
+	while (true) {
+			$client->loop();
+			sleep(1);
+			$date2 = time();
+			if (($date2 - $date1) > $timeout) break;
+			if(!empty($GLOBALS['rcv_message'])) break;
+	}
+	 
+	$client->disconnect();
+	unset($client);						
+} 
+
+/*****************************************************************
+ * Call back functions for MQTT library
+ * ***************************************************************/	
+				
+function connect($r) {
+		if($r == 0) echo "{$r}-CONX-OK|";
+		if($r == 1) echo "{$r}-Connection refused (unacceptable protocol version)|";
+		if($r == 2) echo "{$r}-Connection refused (identifier rejected)|";
+		if($r == 3) echo "{$r}-Connection refused (broker unavailable )|";        
+}
+ 
+function publish() {
+        global $client;
+        echo "Mesage published:";
+}
+ 
+function disconnect() {
+        echo "Disconnected|";
+}
+
+
+function subscribe() {
+	    //**Store the status to a global variable - debug purposes 
+		$GLOBALS['statusmsg'] = $GLOBALS['statusmsg'] . "SUB-OK|";
+}
+
+function message($message) {
+	    //**Store the status to a global variable - debug purposes
+		$GLOBALS['statusmsg']  = "RX-OK|";
+		
+		//**Store the received message to a global variable
+		$GLOBALS['rcv_message'] =  $message->payload;
+}
+
+?>
+<!------------------------------------------------------------------------------------------------------------------------------------>
 
 </html>
