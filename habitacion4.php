@@ -236,7 +236,17 @@
               <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);"><i
                   class="fas fa-tv fa-5x mt-3 mb-3"></i><br>TV</a>
             </div>
-            
+
+            <form action="../modelo/mqtt-test.php" method="post">
+ 
+                <input type="submit" name="btn1" class="btn bg-info" value="PUBLISH">
+
+
+<input type="submit" name="btn2" class="btn bg-info" value="SUBSCRIBE">
+
+ 
+
+        </form>
           </div>
         </div>
       </div>
