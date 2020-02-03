@@ -1,4 +1,31 @@
-<?pho
+<?php
+$accion = $_POST["accion"];
+$statusmsg = "";
+$rcv_message = "";
+switch ($accion) {
+	case 'encender':
+		publish_message('diego', 'PUBTOPIC', 'localhost', 1883, 5);
+		return json_encode(['mensajeerror' => 'Encendido']);
+		break;
+	case 'validarEstado':
+		$statusmsg = "";
+		$rcv_message = "";
+
+		read_topic('PUBTOPIC', 'localhost', 1883, 60, 5);
+		if(!empty($rcv_message) )
+			{
+			$statusmsg."RCVD|" . $rcv_message ;
+			}
+		else
+			{
+			$statusmsg."TIMEDOUT";
+			}
+			return json_encode(['mensajeerror' => $statusmsg]);
+		break;
+	default:
+		// code...
+		break;
+}
 /*echo '<form action="habitacion1.php" method="post">';
 echo '<input type="submit" name="btn1" value="PUBLISH">';
 echo '<input type="submit" name="btn2" value="SUBSCRIBE">';
@@ -10,44 +37,44 @@ $rcv_message = "";
 
 if ($_POST["btn1"] == "PUBLISH")
 	{
-    publish_message('diego', 'PUBTOPIC', 'localhost', 1883, 5);				    
+    publish_message('diego', 'PUBTOPIC', 'localhost', 1883, 5);
 	}
 
 if ($_POST["btn2"] == "SUBSCRIBE")
 	{
-	$statusmsg = "";	
+	$statusmsg = "";
 	$rcv_message = "";
-	
-	read_topic('PUBTOPIC', 'localhost', 1883, 60, 5);	
-	
+
+	read_topic('PUBTOPIC', 'localhost', 1883, 60, 5);
+
 	if(!empty($rcv_message) )
 		{
-		echo $statusmsg."RCVD|" . $rcv_message ;	
+		echo $statusmsg."RCVD|" . $rcv_message ;
 		}
 	else
 		{
-		echo $statusmsg."TIMEDOUT"; 	
-		}		
+		echo $statusmsg."TIMEDOUT";
+		}
 	}//*/
 
 function publish_message($msg, $topic, $server, $port, $keepalive) {
-	
+
 	$client = new Mosquitto\Client();
 	$client->onConnect('connect');
 	$client->onDisconnect('disconnect');
 	$client->onPublish('publish');
 	$client->connect($server, $port, $keepalive);
-	
+
 	try {
 		$client->loop();
 		$mid = $client->publish($topic, $msg);
 		$client->loop();
 		}catch(Mosquitto\Exception $e){
-				echo 'Exception';          
+				echo 'Exception';
 				return;
 			}
     $client->disconnect();
-	unset($client);					    
+	unset($client);
 }
 
 function read_topic($topic, $server, $port, $keepalive, $timeout) {
@@ -58,7 +85,7 @@ function read_topic($topic, $server, $port, $keepalive, $timeout) {
 	$client->onMessage('message');
 	$client->connect($server, $port, $keepalive);
 	$client->subscribe($topic, 1);
-	
+
 	$date1 = time();
 	$GLOBALS['rcv_message'] = '';
 	while (true) {
@@ -68,41 +95,41 @@ function read_topic($topic, $server, $port, $keepalive, $timeout) {
 			if (($date2 - $date1) > $timeout) break;
 			if(!empty($GLOBALS['rcv_message'])) break;
 	}
-	 
+
 	$client->disconnect();
-	unset($client);						
-} 
+	unset($client);
+}
 
 /*****************************************************************
  * Call back functions for MQTT library
- * ***************************************************************/	
-				
+ * ***************************************************************/
+
 function connect($r) {
 		if($r == 0) echo "{$r}-CONX-OK|";
 		if($r == 1) echo "{$r}-Connection refused (unacceptable protocol version)|";
 		if($r == 2) echo "{$r}-Connection refused (identifier rejected)|";
-		if($r == 3) echo "{$r}-Connection refused (broker unavailable )|";        
+		if($r == 3) echo "{$r}-Connection refused (broker unavailable )|";
 }
- 
+
 function publish() {
         global $client;
         echo "Mesage published:";
 }
- 
+
 function disconnect() {
         echo "Disconnected|";
 }
 
 
 function subscribe() {
-	    //**Store the status to a global variable - debug purposes 
+	    //**Store the status to a global variable - debug purposes
 		$GLOBALS['statusmsg'] = $GLOBALS['statusmsg'] . "SUB-OK|";
 }
 
 function message($message) {
 	    //**Store the status to a global variable - debug purposes
 		$GLOBALS['statusmsg']  = "RX-OK|";
-		
+
 		//**Store the received message to a global variable
 		$GLOBALS['rcv_message'] =  $message->payload;
 }
