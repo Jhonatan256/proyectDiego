@@ -222,38 +222,26 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">HABITACION 4</h1>            
+            <h1 class="h3 mb-0 text-gray-800">HABITACION 4</h1>
           </div>
 
           <!-- Content Row -->
           <div class="row">
 
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
-              <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);"><i
+              <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);" onclick="encenderSistema()"><i
                   class="far fa-lightbulb fa-5x mt-3 mb-3"></i><br>ILUMINATION</a>
-            </div> 
+            </div>
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
               <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);"><i
                   class="fas fa-tv fa-5x mt-3 mb-3"></i><br>TV</a>
             </div>
-
-            <form action="../modelo/mqtt-test.php" method="post">
- 
-                <input type="submit" name="btn1" class="btn bg-info" value="PUBLISH">
-
-
-<input type="submit" name="btn2" class="btn bg-info" value="SUBSCRIBE">
-
- 
-
-        </form>
           </div>
         </div>
       </div>
     </div>
   </div>
   </div>
-<?php echo "prueba";?>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -265,11 +253,12 @@
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <!-- <script src="js/demo/chart-area-demo.js"></script>-->
+  <!--<script src="js/demo/chart-pie-demo.js"></script> -->
+  <script src="js/funcionesController.js"></script>
 
 </body>
 <script type="text/javascript">
@@ -280,8 +269,8 @@
         $(this).removeClass('text-warning');
       }else{
         $(this).addClass('text-warning');
-      }     
+      }
   });
-}); 
+});
 </script>
 </html>
