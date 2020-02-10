@@ -229,7 +229,7 @@
           <div class="row">
 
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
-              <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);" onclick="encenderSistema()"><i
+              <a role="button" class="btn btn-light col-12 m-1 encender" href="javascript:void(0);"><i
                   class="far fa-lightbulb fa-5x mt-3 mb-3"></i><br>ILUMINATION</a>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 mb-3 col-6 text-center">
@@ -266,8 +266,10 @@
     $('.encender').on('click', function() {
       console.log($(this).hasClass("text-warning"));
       if($(this).hasClass("text-warning")){
+        encenderSistema()
         $(this).removeClass('text-warning');
       }else{
+        encenderSistema()
         $(this).addClass('text-warning');
       }
   });
