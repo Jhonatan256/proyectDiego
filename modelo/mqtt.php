@@ -4,7 +4,7 @@ $statusmsg = "";
 $rcv_message = "";
 switch ($accion) {
 	case 'encender':
-		publish_message('diego', 'PUBTOPIC', 'localhost', 1883, 5);
+		publish_message('1', 'PUBTOPIC', 'localhost', 1883, 5);
 		return json_encode(['mensajeerror' => 'Encendido']);
 		break;
 	case 'validarEstado':
@@ -22,6 +22,10 @@ switch ($accion) {
 			}
 			return json_encode(['mensajeerror' => $statusmsg]);
 		break;
+	case 'apagar':
+		publish_message('0', 'PUBTOPIC', 'localhost', 1883, 5);
+		return json_encode(['mensajeerror' => 'Encendido']);
+	break;
 	default:
 		// code...
 		break;
