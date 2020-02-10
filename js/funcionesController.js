@@ -1,8 +1,9 @@
-function encenderSistema (idSsitema) {
+function encenderSistema (idSitema = '', accion = '') {
   $.ajax({
     url: './modelo/mqtt.php',
     type: 'POST',
-    data: {accion: 'encender'}
+    data: {accion: accion,
+      idSistema: idSitema}
   })
 	.done(function (result) {
   console.log(result)
