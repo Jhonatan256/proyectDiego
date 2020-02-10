@@ -1,10 +1,12 @@
 <?php
 $accion = $_POST["accion"];
+$sistema = $_POST["idSitema"];
 $statusmsg = "";
 $rcv_message = "";
 switch ($accion) {
 	case 'encender':
-		publish_message('1', 'PUBTOPIC', 'localhost', 1883, 5);
+		// publish_message('1', 'PUBTOPIC', 'localhost', 1883, 5);
+		publish_message('1', $sistema, 'localhost', 1883, 5);
 		return json_encode(['mensajeerror' => 'Encendido']);
 		break;
 	case 'validarEstado':
